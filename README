@@ -1,0 +1,1 @@
+This is a stand-alone package that encapsulates rsync for windows and allows it to be launched with a bash script. The ssh configuration is imported from standard windows OpenSSH.
