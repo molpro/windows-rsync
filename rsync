@@ -2,7 +2,7 @@ export MSYS_NO_PATHCONV=1 MSYS2_ARG_CONV_EXCL="*"
 mkdir -p /tmp
 root=$(dirname "${BASH_SOURCE[0]}")
 export PATH=$root:$PATH
-sshdir=/.ssh
+sshdir=/cygdrive/c/$(echo $HOMEPATH|sed -e 's@\\@/@g')/.ssh
 ssh="$root/ssh -F $sshdir/config -o UserKnownHostsFile=$sshdir/known_hosts"
 for key in id_rsa id_dsa ; do
   if [ -r "$sshdir/$key" ]; then
