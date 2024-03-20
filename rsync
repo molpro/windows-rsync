@@ -1,6 +1,6 @@
 export MSYS_NO_PATHCONV=1 MSYS2_ARG_CONV_EXCL="*"
 mkdir -p /tmp
 root=$(dirname "${BASH_SOURCE[0]}")
-export PATH="$root/rsync_:$PATH"
+export PATH="$root:$PATH"
 sshdir=/cygdrive/c/$(echo $HOMEPATH|sed -e 's@\\@/@g')/.ssh
-$root/rsync_/rsync.exe --rsh="$root/ssh" "$@"
+$root/rsync_exe.exe --rsh="$root/ssh" "$@"
